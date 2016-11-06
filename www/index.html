@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta http-equiv="Content-Security-Policy" content="default-src *; script-src 'self' 'unsafe-inline' 'unsafe-eval' *; style-src  'self' 'unsafe-inline' *">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
     <title></title>
 
@@ -23,10 +24,14 @@
     <link href="css/ionic.app.css" rel="stylesheet">
     -->
 
+
+    <script src="https://maps.googleapis.com/maps/api/js?&key=YOUAPIKEY"></script>
+
     <!-- ionic/angularjs js -->
     <script src="lib/ionic/js/ionic.bundle.js"></script>
 
     <!-- cordova script (this will be a 404 during development) -->
+    <script src="lib/ngCordova/dist/ng-cordova.min.js"></script>
     <script src="cordova.js"></script>
 
     <!-- your app's js -->
@@ -34,6 +39,8 @@
     <script src="js/controllers/appCtrl.js"></script>
     <script src="js/controllers/moviesCtrl.js"></script>
     <script src="js/controllers/movieCtrl.js"></script>
+    <script src="lib/lodash/dist/lodash.min.js"></script>
+    <script src="lib/angular-google-maps/dist/angular-google-maps.min.js"></script>
   </head>
 
   <body ng-app="starter">
