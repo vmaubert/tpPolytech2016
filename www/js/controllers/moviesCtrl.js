@@ -2,7 +2,7 @@ angular.module('controllers')
 
   .controller('MoviesCtrl', function ($scope, $http) {
     $scope.movies = [];
-    $http.jsonp('http://api.rottentomatoes.com/api/public/v1.0/lists/movies/box_office.json', {
+    $http.jsonp('http://api-beta.rottentomatoes.com/api/public/v1.0/lists/movies/box_office.json', {
         params: {
           limit: 16,
           country: 'us',
