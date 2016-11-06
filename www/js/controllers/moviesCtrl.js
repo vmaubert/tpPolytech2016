@@ -1,12 +1,12 @@
 angular.module('controllers')
 
-  .controller('MoviesCtrl', function ($scope, $http) {
+  .controller('MoviesCtrl', function ($scope, $http, rottenTomatoesConst) {
     $scope.movies = [];
-    $http.jsonp('http://api-beta.rottentomatoes.com/api/public/v1.0/lists/movies/box_office.json', {
+    $http.jsonp(rottenTomatoesConst.url + 'lists/movies/box_office.json', {
         params: {
           limit: 16,
           country: 'us',
-          apikey: '7waqfqbprs7pajbz28mqf6vz',
+          apikey: rottenTomatoesConst.apiKey,
           callback: 'JSON_CALLBACK'
         }
       })

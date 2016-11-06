@@ -23,6 +23,10 @@ angular.module('starter', ['ionic', 'controllers'])
       }
     });
   })
+  .constant("rottenTomatoesConst", {
+    "apiKey": '7waqfqbprs7pajbz28mqf6vz',
+    "url": "http://api-beta.rottentomatoes.com/api/public/v1.0/"
+  })
   .config(function ($stateProvider, $urlRouterProvider) {
     $stateProvider
 
