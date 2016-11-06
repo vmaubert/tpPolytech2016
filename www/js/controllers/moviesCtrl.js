@@ -25,5 +25,9 @@ angular.module('controllers')
 
     $scope.isNotFullLoaded = function(){
       return $scope.movies.length < maxResult;
-    }
+    };
+
+    $scope.$on('$stateChangeSuccess', function() {
+      $scope.loadMore();
+    });
   });
